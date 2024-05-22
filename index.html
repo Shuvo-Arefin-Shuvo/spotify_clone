@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .albums {
+        height: 93%;
+        margin-top: 7px;
+        overflow-y: scroll;
+        /* display: flex;
+        flex-direction: row; */
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .album_card {
+        height: 250px;
+        width: 205px;
+      }
+      .album_card img {
+        position: relative;
+        object-fit: contain;
+        border-radius: 7px;
+        /* width: 100px; */
+      }
+      .album_card .para {
+        margin: 0px 0px 0px 5px;
+      }
+      .album_card:hover{
+        cursor: pointer;
+        /* background-color: grey; */
+      }
+      .para {
+        display: flex;
+        flex-direction: column;
+        /* column-gap: 6px; */
+        row-gap: 5px;
+      }
+
+      .play_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 20px;
+        right: 845px;
+        opacity: 0;
+        z-index: 10;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+      }
+
+      .album_card:hover .play_button {
+        bottom: 35%; /* Target position when hovering */
+        opacity: 1; /* Make it visible when hovering */
+ 
+      }
+
+      .play_button img {
+        width: 50%; /* Adjust the size of the image as needed */
+        height: 50%; /* Adjust the size of the image as needed */
+        filter: invert(
+          100%
+        ); /* Invert the color of the image to make it visible on a black background */
+      }
+      .play_button:hover{
+        transform: scale(1.07);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main flex">
+      <div class="left margin1">
+        <div class="home flex flex_direction_colum bg-color radius">
+          <div class="home_btn flex a_center curson margin1">
+            <img src="home.svg" alt="" />
+            <p class="margin2 bold-font">Home</p>
+          </div>
+          <div class="search flex a_center curson margin1">
+            <img src="search.svg" style="filter: opacity(0.6)" alt="" />
+            <p class="margin2 bold-font grey_font">Search</p>
+          </div>
+        </div>
+        <div class="library flex flex_direction_colum bg-color radius margin2">
+          <div class="head flex margin1 a_center">
+            <img src="lib.svg" alt="library" class="invert" />
+            <p class="margin2 bold-font grey_font">Your Library</p>
+          </div>
+          <div class="library_content margin1 bg-color">
+            <div class="card bg-color2 padding radius margin2">
+              <h4>Create your first playlist</h4>
+              <h5 class="margin2">It's easy,we'll help you</h5>
+              <br />
+              <button class="l_font bold-font">Create playlist</button>
+            </div>
+            <br />
+            <div class="card bg-color2 padding radius margin2">
+              <h4>Let's find some prodcasts to follow</h4>
+              <h5 class="margin2">We'll keep you updated on new episodes</h5>
+              <br />
+              <button class="l_font bold-font">Browse prodcasts</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer flex margin1">
+          <div>
+            <a href="https://www.spotify.com/bd-en/legal/">
+              <span>Legal</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/bd-en/safetyandprivacy/">
+              <span>Safety & Privacy Center</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/bd-en/legal/privacy-policy/">
+              <span>Privacy Policy</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/bd-en/legal/cookies-policy/">
+              <span>Cookies</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/bd-en/legal/privacy-policy/#s3">
+              <span>About Ads</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/bd-en/accessibility/">
+              <span>Accessibility</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right margin1">
+        <div class="head bg-color radius_up flex a-center margin padding">
+          <div class="arrows flex">
+            <img src="left.svg" alt="left_arrow" class="curson" />
+            <img src="right.svg" alt="left_arrow" class="curson" />
+          </div>
+          <div class="sign flex a-center">
+            <button class="btn1 no-bg grey_font bold-font no-border">
+              Sign Up
+            </button>
+            <button class="btn2 no-border" style="font-weight: 600">
+              Log In
+            </button>
+          </div>
+        </div>
+        <div class="content radius_down padding_left_up">
+          <h3>Your Playlists</h3>
+          <div class="albums border-red margin2">
+            <div class="album_card radius">
+              <div class="play_button">
+                <img src="play_button.svg" alt="" />
+              </div>
+              <img
+                src="data:image/jpeg;base64,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"
+                alt=""
+              />
+              <div class="para">
+                <h4>The tortured poet</h4>
+                <h6 class="grey_font">Taylor swift</h6>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+.flex{
+    display: flex;
+}
+.flex_direction_colum{
+    flex-direction: column;
+}
+.flex_direction_row{
+    flex-direction: row;
+}
+.j-center{
+    justify-content: center;
+}
+.j-around{
+    justify-content: space-around;
+}
+.j-between{
+    justify-content: space-between;
+}
+.a-center{
+    align-items: center;
+}
+.a_c-center{
+    align-content: center;
+}
+.bg-color{
+    background-color: #161616;
+}
+.bg-color2{
+    background-color: #252525;
+}
+.border-red{
+    border: 2px solid red;
+}
+.margin1{
+    margin: 7px;
+}
+.invert{
+    filter: invert(1);
+}
+.no-list{
+    list-style: none;
+}
+.padding{
+    padding: 15px;
+}
+.padding2{
+    padding-top: 10px;
+}
+.padding3{
+    padding-bottom: 10px;
+}
+.padding_left_up{
+    padding: 10px 0px 0px 15px;
+}
+.radius{
+    border-radius: 7px;
+}
+.radius_up{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.radius_down{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.button_radius{
+    border-radius: 10px;
+}
+.margin2{
+    margin-top: 5px;
+}
+.mid-font{
+    font-size: medium;
+}
+.l-font{
+    font-size: large;
+}
+.font{
+    font-family: "Open Sans", sans-serif;
+}
+.bold-font{
+    font-weight: bolder;
+}
+.normal_font_weight{
+    font-weight: 300;
+}
+.grey_font{
+    color: rgb(156, 153, 153);
+}
+.curson{
+    cursor: pointer;
+}
+.no-bg{
+    background: none;
+}
+.no-border{
+    border: none;
+}
+.button_size{
+    height: 27px;
+    width: 65px;
+}
+.txt_center{
+    text-align: center;
+}
+.overflow{
+    overflow-y: auto;
+}
